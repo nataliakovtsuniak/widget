@@ -57,6 +57,21 @@ const useStyles = createUseStyles({
     }
 });
 
+/**
+ * RetentionWidget
+ *
+ * This component creates a widget to display a legend and a radial chart of data.
+ * The first three items from data array are expected to have color props.
+ * The last data item from data array are expected to be placed inside  RadialChartBar
+ * and has no color provided.
+ *
+ * @param widgetTitle
+ * @param widgetColor
+ * @param data
+ * @returns {JSX.Element}
+ * @constructor
+ */
+
 export default function RetentionWidget({ widgetTitle, widgetColor, data }) {
     const classes = useStyles({ widgetColor });
 

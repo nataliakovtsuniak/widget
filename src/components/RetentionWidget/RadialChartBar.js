@@ -16,6 +16,18 @@ const useStyles = createUseStyles({
     }
 });
 
+/**
+ *
+ * RadialChartBar
+ *
+ * This component exposes data to draw a radial chart.
+ * To add  addition info inside chart we can optionally pass children node.
+ * @param data
+ * @param children
+ * @returns {JSX.Element}
+ * @constructor
+ */
+
 export default function RadialChartBar({ data, children = null }) {
     const classes = useStyles();
 

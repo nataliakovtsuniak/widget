@@ -29,6 +29,22 @@ const useStyles = createUseStyles((theme) => ({
     percent: { fontSize: 24, color: theme.color.textPrimary }
 }));
 
+/**
+ *
+ * LegendItem
+ *
+ * This component creates a LegentItem which can be used in a LegendBar near
+ * RadialCart area or inside it.
+ * If color prop is provided - legend item will have a color line before its text.
+ * If color prop is not provided - legend will be shown as two text columns
+ * in reversed direction( as design requires).
+ * @param name
+ * @param value
+ * @param color
+ * @returns {JSX.Element}
+ * @constructor
+ */
+
 export default function LegendItem({ name, value, color = null }) {
     const theme = useTheme();
     const classes = useStyles({ color, theme });
