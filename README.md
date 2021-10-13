@@ -1,2 +1,5 @@
-# Create-React-App with advance setup
+# RetentionWidget
+
+# Run to start:
+yarn install && yarn start
 
