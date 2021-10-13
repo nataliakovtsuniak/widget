@@ -89,6 +89,7 @@ export default function RetentionWidget({ widgetTitle, widgetColor, data }) {
                             name={item.name}
                             value={item.value}
                             color={item.fill}
+                            withColorLine
                         />
                     ))}
                 </div>

@@ -34,24 +34,33 @@ const useStyles = createUseStyles((theme) => ({
  * LegendItem
  *
  * This component creates a LegentItem which can be used in a LegendBar near
- * RadialCart area or inside it.
- * If color prop is provided - legend item will have a color line before its text.
- * If color prop is not provided - legend will be shown as two text columns
+ * RadialChartBar area or inside it.
+ * If withColorLine prop is provided - legend item will have a color line before its text.
+ * If withColorLine prop is false - legend will be shown as two text columns
  * in reversed direction( as design requires).
  * @param name
  * @param value
  * @param color
+ * @param withColorLine
  * @returns {JSX.Element}
  * @constructor
  */
 
-export default function LegendItem({ name, value, color = null }) {
+export default function LegendItem({
+    name,
+    value,
+    color = "#000",
+    withColorLine = false
+}) {
     const theme = useTheme();
     const classes = useStyles({ color, theme });
 
     return (
         <div
-            className={clsx(classes.legendItem, color && classes.legendItemWithLine)}
+            className={clsx(
+                classes.legendItem,
+                withColorLine && classes.legendItemWithLine
+            )}
         >
             <div className={classes.name}>{name}</div>
             <div className={classes.percent}>{value}%</div>
@@ -62,5 +71,6 @@ export default function LegendItem({ name, value, color = null }) {
 LegendItem.propTypes = {
     name: PropTypes.string.isRequired,
     value: PropTypes.number.isRequired,
-    color: PropTypes.string
+    color: PropTypes.string,
+    withColorLine: PropTypes.bool
 };
