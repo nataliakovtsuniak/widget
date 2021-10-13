@@ -61,8 +61,8 @@ const useStyles = createUseStyles({
  * RetentionWidget
  *
  * This component creates a widget to display a legend and a radial chart of data.
- * The first three items from data array are expected to have color props.
- * The last data item from data array are expected to be placed inside  RadialChartBar
+ * The first three items from data array expect to have color props.
+ * The last data item from data array expects to be placed inside  RadialChartBar
  * and has no color provided.
  *
  * @param widgetTitle
