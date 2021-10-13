@@ -67,18 +67,18 @@ export default function RetentionWidget({ widgetTitle, widgetColor, data }) {
         <div className={classes.widgetWrapper}>
             <div className={classes.leftColumn}>
                 <div className={classes.widgetTitle}>{widgetTitle}</div>
-
                 <div className={classes.legendBar}>
-                    {itemsWithColors.map((chart, index) => (
+                    {itemsWithColors.map((item, index) => (
                         <LegendItem
                             key={uid(index)}
-                            name={chart.name}
-                            value={chart.value}
-                            color={chart.fill}
+                            name={item.name}
+                            value={item.value}
+                            color={item.fill}
                         />
                     ))}
                 </div>
             </div>
+
             <div className={classes.rightColumn}>
                 <RadialChartBar data={itemsWithColors}>
                     <LegendItem name={lastItem.name} value={lastItem.value} />
